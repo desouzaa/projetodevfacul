@@ -31,7 +31,14 @@
                     <th scope="row">{{$servico->id}}</th>
                     <td>{{$servico->servico}}</td>
                     <td>{{$servico->preco}}</td>
-                    <td><a href="" class="btn btn-secondary">Ver</a></td>
+                    <td>  
+                    <form action="/excluirservico/{{$servico->id}}" method="POST">
+                      @csrf
+                      @method('DELETE')
+                    
+                 <button class="btn btn-danger" type="submit" onclick="return confirm('Tem certeza que deseja deletar esse Serviço?')">Excluir</button>
+                    </td>
+                    </form></td>
                   </tr>
                    @empty
                   <tr><td colspan="4"> Nenhum Serviço cadastrado</td></tr>

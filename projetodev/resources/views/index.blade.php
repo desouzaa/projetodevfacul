@@ -2,6 +2,7 @@
 @section('title', 'Home')
 @section('content')
 <h1 class="h3 mb-3 text-center fs-2"><strong>Dashboard</strong></h1>
+<h6>{{$qtt}}</h6>
 
 <div class="row">
 	<div class="col-xl-6 col-xxl-6 d-flex mt-5">

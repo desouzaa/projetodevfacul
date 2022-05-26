@@ -11,11 +11,7 @@
             <div class="card-body p-xs-0 p-sm-2 p-lg-5 p-md-5">
                 <h2 class="mb-4" style="text-align: center;">Pedidos Finalizados</h2>
 
-         
-            <div id="msg" class="alert alert-danger text-center mx-auto" role="alert"></div>
-          
-            <div id="msg2" class="alert alert-success text-center mx-auto" role="alert"></div>
-       
+              
 
             <div class="table-responsive">
             <table id="tablepedidos" class="table table-striped table-hover text-center">
@@ -23,7 +19,7 @@
                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">CPF</th>
+                    <th scope="col">Valor</th>
                     <th scope="col">Ver</th>
                     
                     
@@ -31,19 +27,19 @@
                 </thead>
                 <tbody>
 
-                
+                @forelse($pedidos as $pedido)
                   <tr>
-                    <th scope="row"></th>
-                    <td></td>
+                    <th scope="row">{{$pedido->id}}</th>
+                    <td>{{$pedido->id_cliente}}</td>
                     <td></td>
                     <td><a href="" class="btn btn-secondary">Ver</a></td>
                     
                     
                     
                   </tr>
-               
+                 @empty
                   <tr><td colspan="4"> Nenhum Pedido realizado</td></tr>
-          
+                 @endforelse
                 </tbody>
               </table>
             </div>

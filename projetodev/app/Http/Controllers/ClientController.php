@@ -83,7 +83,8 @@ class ClientController extends Controller
 
     }catch(Exception $e){
         return view('index');
-    }}
+    }
+}
 
     public function storeendereco (Request $request){
 
@@ -130,17 +131,24 @@ class ClientController extends Controller
 
     public function destroy($id){
 
+
         try{
-            Client::findOrFail($id)->delete();
-            $clientes = Client::all();
-            return redirect('clientes')->with('clientes',$clientes)->with('msg', 'Cliente excluído com sucesso!');
-    
-            }catch(\Illuminate\Database\QueryException $e){
-    
-            $clientes = Client::all();
-            return redirect('clientes')->with('clientes',$clientes)->with('msg2', 'Erro, Cliente tem pedidos, ou pets cadastrados');
-    
-            }
+        $telefones = Telefone::where('id_cliente',$id)->get();
+        foreach($telefones as $telefone){
+            Telefone::findOrFail($telefone->id)->delete();
+        }
+        $enderecos = Endereco::where('id_cliente',$id)->get();
+        foreach($enderecos as $endereco){
+            Endereco::findOrFail($endereco->id)->delete();
+        }
+        Client::findOrFail($id)->delete();
+        $clientes = Client::all();
+        return redirect('clientes')->with('clientes',$clientes)->with('msg', 'Cliente excluído com sucesso!');
+
+        }catch(Exception $e){
+        $clientes = Client::all();
+        return redirect('clientes')->with('clientes',$clientes)->with('msg2', 'Não foi possível excluir o cliente!');
+        }
 
 
 

@@ -38,14 +38,19 @@ Route::get('/index', [UserController::class, 'index']);
 
 Route::get('/pedidosfinalizados',  [PedidoController::class, 'listar']);
 Route::get('/cadastrarpedido', [PedidoController::class, 'cadastrar']);
+Route::post('/salvarpedido', [PedidoController::class, 'store']);
 
 
 Route::get('/pagamentos', [PagamentoController::class, 'listar']);
 Route::get('/cadastrarpagamento', [PagamentoController::class, 'cadastrar']);
+Route::post('/salvarpagamento', [PagamentoController::class, 'salvarpagamento']);
+Route::delete('/excluirpagamento/{id}', [PagamentoController::class, 'destroy']);
 
 
 Route::get('/servicos', [ServicoController::class, 'listar']);
 Route::get('/cadastrarservico', [ServicoController::class, 'cadastrar']);
+Route::post('/salvarservico', [ServicoController::class, 'salvarservico']);
+Route::delete('/excluirservico/{id}', [ServicoController::class, 'destroy']);
 
 
 Route::get('/clientes', [ClientController::class, 'listar']);

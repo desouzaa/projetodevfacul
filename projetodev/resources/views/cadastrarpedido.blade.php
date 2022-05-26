@@ -11,12 +11,9 @@
             </div>
             <div class="card-body p-xs-0 p-sm-3 p-lg-5 p-md-5">
 
-                <form onsubmit="return confirm('Deseja finalizar o pedido?')" id="form_cadastro" method="POST" action="/salvarpedido/"> 
-            
-                    <div id="msg" class="alert alert-danger" role="alert"></div>
-         
-                
-
+                <form onsubmit="return confirm('Deseja finalizar o pedido?')" id="form_cadastro" method="POST" action="/salvarpedido"> 
+            @csrf
+                   
                     <h2 class="mb-4" style="text-align: center;">Novo Pedido</h2>
                    
                     <label style="font-weight: bolder;" class="form-label">INFORMAÇÕES</label>
@@ -28,11 +25,11 @@
                     <div class="input-group mb-3">
                         <select required class="form-select js-example-basic-single" name="cliente" id="cliente">
                             <option selected selected="" value="">Selecionar Cliente</option>
-                         
-                            <option value=""></option>
-                          
+                         @forelse($clientes as $cliente)
+                            <option value="{{$cliente->id}}">Cod: {{$cliente->id}} - Nome: {{$cliente->nome_completo}}</option>
+                          @empty
                             <option disabled value="">Nenhum Cliente/Tutor cadastrado</option>
-                           
+                           @endforelse
                         </select>
                         
                     </div>  
@@ -40,11 +37,11 @@
                     <div class="input-group mb-3">
                         <select required class="form-select js-example-basic-single" name="pet" id="pet">
                             <option selected selected="" value="">Selecionar Pet</option>
-                            
-                            <option value="">-</option>
-                          
+                            @forelse($pets as $pet)
+                            <option value="{{$pet->id}}">Cod: {{$pet->id}} - Nome: {{$pet->nome_pet}}</option>
+                            @empty
                             <option disabled value="">Nenhum Pet cadastrado</option>
-                         
+                            @endforelse
                         </select>
                       
                     </div>   
@@ -119,9 +116,20 @@
                     var celula5 = linha.insertCell(4);
                     var celula6 = linha.insertCell(5);
 
-                  
+                    celula1.innerHTML = "<div id='' style='min-width: 200px; width: 98%;'><input id='idlinha' type='hidden' value='"+idlinha+"'><select onchange='mostrardados(this.value, "+idlinha+")' required class='form-select js-example-basic-single' name='servico"+idlinha+"' id='servico"+idlinha+"'><option selected selected='' value=''>Selecionar Serviço/Produto</option>@forelse($servicos as $servico)   <option value='{{$servico->preco}}'>{{$servico->servico}}</option>@empty<option disabled value=''>Nenhum Serviço/Produto cadastrado</option>@endforelse</select></div>"
 
-               
+                    celula2.innerHTML = '  <input onchange="alterarqtd(this.value, '+idlinha+')" type="number" class="form-control" readonly id="quantidade'+idlinha+'" name="quantidade'+idlinha+'" style="width: 100%; min-width: 70px;" >'
+
+                    celula3.innerHTML = '<input type="number"  class="form-control decimal" readonly id="preco'+idlinha+'" name="preco'+idlinha+'" style="width: 100%; min-width: 70px;">'
+
+                    celula4.innerHTML = '    <input onchange="alterardesconto(this.value, '+idlinha+')" readonly step="0.50" type="number" class="form-control decimal" id="descontoitem'+idlinha+'" name="descontoitem'+idlinha+'" style="width: 100%; min-width: 70px;">'
+
+                    celula5.innerHTML = ' <input type="text" class="form-control decimal somatoria" id="totalitem'+idlinha+'" name="totalitem'+idlinha+'" readonly="true" tabindex="-1" value="" style="width: 100%; min-width: 70px;">'
+
+                    celula6.innerHTML = '<button  onclick="removerLinha($(this));" type="button" class="btn btn-danger btn-xs">X</button>'
+
+                    $('#qtddelinha').val(idlinha)
+                    
                     }
                     
                     function atualizartotal(){
@@ -144,7 +152,7 @@
                     $('#preco'+linha+'').val(servico)
                     $('#totalitem'+linha+'').val(servico)
                     vtotal += parseFloat(servico)
-                    $('#total_pedido').blade.php(vtotal)
+                    $('#total_pedido').html(vtotal)
                     atualizartotal()
                     }
 
@@ -198,8 +206,9 @@
 
               
         
-                
+                <input id="qtddelinha" name="qtddelinha" type="hidden" readonly value="">
                 <div class="col-lg-3 mx-auto mt-5">
+                    
                     <input class="btn btn-secondary rounded align-middle w-100 mt-3 mb-5" type="submit" value="Enviar">
 
                     </form>

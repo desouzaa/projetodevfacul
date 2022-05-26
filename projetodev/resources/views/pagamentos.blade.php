@@ -12,10 +12,12 @@
             <div class="card-body p-xs-0 p-sm-2 p-lg-5 p-md-5">
                 <h2 class="mb-4" style="text-align: center;">Pagamentos Cadastrados</h2>
      
-            <div id="msg" class="alert alert-danger text-center mx-auto" role="alert"></div>
-        
-            <div id="msg2" class="alert alert-success text-center mx-auto" role="alert"></div>
-         
+                @if(session('msg'))   
+            <div id="msg" class="alert alert-success text-center mx-auto" role="alert">{{session('msg')}}</div>
+            @endif
+            @if(session('msg2'))   
+            <div id="msg" class="alert alert-danger text-center mx-auto" role="alert">{{session('msg2')}}</div>
+            @endif
 
             <div class="table-responsive">
             <table id="tableservicos" class="table table-striped table-hover text-center">
@@ -33,9 +35,21 @@
                 @forelse($pagamentos as $pagamento)
                   <tr>
                     <th scope="row">{{$pagamento->id}}</th>
-                    <td>{{$pagamento->id}}</td>
-                    <td>{{$pagamento->id}}</td>
-                    <td><a onclick="return confirm('Tem certeza que deseja deletar esta pelagem?')" href="/excluirpagamento?id={{$pagamento->id}}" class="btn btn-danger">Excluir</a></td>
+                    <td>{{$pagamento->nome}}</td>
+                    <td>{{$pagamento->descricao}}</td>
+
+                    <td>
+                      
+                    <form action="/excluirpagamento/{{$pagamento->id}}" method="POST">
+                      @csrf
+                      @method('DELETE')
+                    
+                 <button class="btn btn-danger" type="submit" onclick="return confirm('Tem certeza que deseja deletar este Pagamento?')">Excluir</button>
+                    </td>
+                    </form>
+                                    
+                 
+                  </td>
                     
                     
                     

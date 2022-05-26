@@ -11,11 +11,9 @@
             </div>
             <div class="card-body p-xs-0 p-sm-3 p-lg-5 p-md-5">
 
-                <form  id="form_cadastro" method="POST" action="/salvarservico/"> 
+                <form  id="form_cadastro" method="POST" action="/salvarservico"> 
             
-           
-                    <div id="msg" class="alert alert-danger" role="alert"></div>
-              
+                    @csrf     
                 
                     <h2 class="mb-4" style="text-align: center;">Novo Serviço</h2>
                    
@@ -33,7 +31,7 @@
                     </div> 
 
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control" name="preco" id="preco" required minlength="1" maxlength="50" placeholder="Preço do Serviço">
+                        <input step="0.1" type="number" class="form-control" name="preco" id="preco" required minlength="1" maxlength="50" placeholder="Preço do Serviço">
                         <label for="preco">Preço (R$)</label>
                     </div>   
                     
