@@ -14,14 +14,15 @@ class CreateItensTable extends Migration
     public function up()
     {
         Schema::create('itens', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_pedido');
-            $table->unsignedBigInteger('id_servico');
-            $table->integer('qtd');
-            $table->float('preco_unitario');
-            $table->float('desconto');
-            $table->foreign('id_pedido')->references('id')->on('pedidos');
-            $table->foreign('id_servico')->references('id')->on('servicos');
-            $table->timestamps();
+        $table->id();
+        $table->unsignedBigInteger('id_pedido');
+        $table->unsignedBigInteger('id_servico');
+        $table->integer('qtd');
+        $table->float('preco_unitario');
+        $table->float('desconto');
+        $table->foreign('id_pedido')->references('id')->on('pedidos');
+        $table->foreign('id_servico')->references('id')->on('servicos');
+        $table->timestamps();
         });
     }
 

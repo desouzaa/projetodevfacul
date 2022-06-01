@@ -1,0 +1,20 @@
+ $table->id();
+            $table->date('data');
+            $table->unsignedBigInteger('id_cliente');
+            $table->unsignedBigInteger('id_pet');
+            $table->foreign('id_cliente')->references('id')->on('clients');
+            $table->foreign('id_pet')->references('id')->on('pets');
+            $table->timestamps();
+
+
+
+
+
+
+
+
+
+
+
+
+

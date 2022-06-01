@@ -10,14 +10,14 @@ class Client extends Model
     use HasFactory;
     
 
-
     public function pet(){
         return $this->belongsTo(Pet::class, 'id_cliente');
     }
 
     public function pedido(){
-        return $this->belongsTo('app\Models\Pedido', 'id_cliente');
+        return $this->hasMany(Pedido::class, 'id_cliente');
     }
+
 
  
     

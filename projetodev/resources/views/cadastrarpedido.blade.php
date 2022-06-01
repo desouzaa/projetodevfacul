@@ -115,18 +115,21 @@
                     var celula4 = linha.insertCell(3);
                     var celula5 = linha.insertCell(4);
                     var celula6 = linha.insertCell(5);
+                    var celula7 = linha.insertCell(6);
 
                     celula1.innerHTML = "<div id='' style='min-width: 200px; width: 98%;'><input id='idlinha' type='hidden' value='"+idlinha+"'><select onchange='mostrardados(this.value, "+idlinha+")' required class='form-select js-example-basic-single' name='servico"+idlinha+"' id='servico"+idlinha+"'><option selected selected='' value=''>Selecionar Serviço/Produto</option>@forelse($servicos as $servico)   <option value='{{$servico->preco}}'>{{$servico->servico}}</option>@empty<option disabled value=''>Nenhum Serviço/Produto cadastrado</option>@endforelse</select></div>"
 
-                    celula2.innerHTML = '  <input onchange="alterarqtd(this.value, '+idlinha+')" type="number" class="form-control" readonly id="quantidade'+idlinha+'" name="quantidade'+idlinha+'" style="width: 100%; min-width: 70px;" >'
+                    celula2.innerHTML = '  <input required onchange="alterarqtd(this.value, '+idlinha+')" type="number" class="form-control" readonly id="quantidade'+idlinha+'" name="quantidade'+idlinha+'" style="width: 100%; min-width: 70px;" >'
 
-                    celula3.innerHTML = '<input type="number"  class="form-control decimal" readonly id="preco'+idlinha+'" name="preco'+idlinha+'" style="width: 100%; min-width: 70px;">'
+                    celula3.innerHTML = '<input required type="number"  class="form-control decimal" readonly id="preco'+idlinha+'" name="preco'+idlinha+'" style="width: 100%; min-width: 70px;">'
 
-                    celula4.innerHTML = '    <input onchange="alterardesconto(this.value, '+idlinha+')" readonly step="0.50" type="number" class="form-control decimal" id="descontoitem'+idlinha+'" name="descontoitem'+idlinha+'" style="width: 100%; min-width: 70px;">'
+                    celula4.innerHTML = '    <input required value="0" onchange="alterardesconto(this.value, '+idlinha+')" readonly step="0.50" type="number" class="form-control decimal" id="descontoitem'+idlinha+'" name="descontoitem'+idlinha+'" style="width: 100%; min-width: 70px;">'
 
-                    celula5.innerHTML = ' <input type="text" class="form-control decimal somatoria" id="totalitem'+idlinha+'" name="totalitem'+idlinha+'" readonly="true" tabindex="-1" value="" style="width: 100%; min-width: 70px;">'
+                    celula5.innerHTML = ' <input required type="text" class="form-control decimal somatoria" id="totalitem'+idlinha+'" name="totalitem'+idlinha+'" readonly="true" tabindex="-1" value="" style="width: 100%; min-width: 70px;">'
 
                     celula6.innerHTML = '<button  onclick="removerLinha($(this));" type="button" class="btn btn-danger btn-xs">X</button>'
+
+                    celula7.innerHTML = '<input value="{{$servico->id}}" readonly type="hidden" class="form-control decimal" id="servicoo'+idlinha+'" name="servicoo'+idlinha+'" style="width: 100%; min-width: 70px;">'
 
                     $('#qtddelinha').val(idlinha)
                     

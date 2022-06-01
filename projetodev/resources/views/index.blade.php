@@ -8,7 +8,7 @@
 	<div class="col-xl-12 col-xxl-12 col-sm-12 col-12 d-flex mt-5 mt-3">
 		<div class="w-100">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-3">
 					<div class="card">
 						<div class="card-body">
 							<div class="row">
@@ -52,7 +52,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-3">
 					<div class="card">
 						<div class="card-body">
 							<div class="row">
@@ -97,9 +97,43 @@
 					</div>
 				
 				</div>
+				<div class="col-sm-6">
+				<div class="table-responsive">
+	
+	<table id="tablepedidos" class="table table-striped table-hover text-center">
+		<thead>
+		  <tr>
+			<th scope="col">ID</th>
+			<th scope="col">Data</th>
+			<th scope="col">Nome</th>
+			<th scope="col">Ver</th>
+			
+			
+		  </tr>
+		</thead>
+		<tbody>
+
+		@forelse($pedidos as $pedido)
+		  <tr>
+			<th scope="row">{{$pedido->id}}</th>
+			<td>{{$pedido->data}}</td>
+			<td>{{$pedido->client->nome_completo}}</td>
+			<td><a href="/singlepedido/{{$pedido->id}}" class="btn btn-secondary">Ver</a></td>
+							   
+			
+		  </tr>
+		 @empty
+		  <tr><td colspan="4"> Nenhum Pedido realizado</td></tr>
+		 @endforelse
+		</tbody>
+	  </table>
+</div>
+				</div>
+				
 			</div>
 		</div>
 	</div>
+
 	
 
 	
@@ -107,7 +141,10 @@
 	
 
 </div>
-
+<script>
+	$(document).ready( function () {
+		$('#tablepedidos').DataTable();
+	} );</script>
 
 
 

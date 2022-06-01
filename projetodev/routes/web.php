@@ -39,7 +39,7 @@ Route::get('/index', [UserController::class, 'index']);
 Route::get('/pedidosfinalizados',  [PedidoController::class, 'listar']);
 Route::get('/cadastrarpedido', [PedidoController::class, 'cadastrar']);
 Route::post('/salvarpedido', [PedidoController::class, 'store']);
-
+Route::get('/singlepedido/{id}', [PedidoController::class, 'singlepedido']);
 
 Route::get('/pagamentos', [PagamentoController::class, 'listar']);
 Route::get('/cadastrarpagamento', [PagamentoController::class, 'cadastrar']);

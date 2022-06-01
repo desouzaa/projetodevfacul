@@ -29,7 +29,8 @@ class UserController extends Controller
     public function index(){
 
     if(auth()->check()){
-    return view('index');
+    $pedidos = Pedido::all();
+    return view('index',['pedidos'=>$pedidos]);
     }else{
     return view('login');
     }

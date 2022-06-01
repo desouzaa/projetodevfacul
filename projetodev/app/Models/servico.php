@@ -9,8 +9,9 @@ class servico extends Model
 {
     use HasFactory;
 
-    // public function pedido(){
-    //     return $this->belongsTo(Pedido::class, 'id_servico');
-    // }
+ 
+    public function iten(){
+        return $this->belongsToMany(Iten::class, 'id_servico');
+    }
 
 }

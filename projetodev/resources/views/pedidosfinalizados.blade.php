@@ -18,8 +18,8 @@
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
+                    <th scope="col">Data</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Valor</th>
                     <th scope="col">Ver</th>
                     
                     
@@ -30,11 +30,10 @@
                 @forelse($pedidos as $pedido)
                   <tr>
                     <th scope="row">{{$pedido->id}}</th>
-                    <td>{{$pedido->Client}}</td>
-                    <td></td>
-                    <td><a href="" class="btn btn-secondary">Ver</a></td>
-                    
-                    
+                    <td>{{$pedido->data}}</td>
+                    <td>{{$pedido->client->nome_completo}}</td>
+                    <td><a href="/singlepedido/{{$pedido->id}}" class="btn btn-secondary">Ver</a></td>
+                                       
                     
                   </tr>
                  @empty
