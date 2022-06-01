@@ -30,7 +30,7 @@
                 @forelse($pedidos as $pedido)
                   <tr>
                     <th scope="row">{{$pedido->id}}</th>
-                    <td>{{$pedido->id_cliente}}</td>
+                    <td>{{$pedido->Client}}</td>
                     <td></td>
                     <td><a href="" class="btn btn-secondary">Ver</a></td>
                     

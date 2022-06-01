@@ -16,8 +16,9 @@ class PedidoController extends Controller
     
     public function listar(){
         if(auth()->check()){
-    $pedidos = Pedido::all();
 
+    
+    $pedidos = Pedido::all();
     return view('pedidosfinalizados', ['pedidos' => $pedidos]);
 
     }else{
@@ -61,7 +62,9 @@ class PedidoController extends Controller
         $iten->save();
             
         }
+
         $pedidos = Pedido::all();
+
         return view('pedidosfinalizados', ['pedidos'=>$pedidos]);
 
     }

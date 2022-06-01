@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Tamanho extends Model
 {
     use HasFactory;
+
+    public function pet(){
+        return $this->belongsTo(Pet::class, 'id_tamanho');
+    }
 }
+

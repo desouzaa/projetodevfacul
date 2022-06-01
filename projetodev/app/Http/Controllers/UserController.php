@@ -7,22 +7,24 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
+use App\Models\pedido;
+
 class UserController extends Controller
 {
     public function logar(Request $request){
-        if(auth()->check()){
-            return view('index');
-        }else{
+        
+        
         if(Auth::attempt(['email'=> $request->email, 'password'=>$request->senha])){
 
             $request->session()->regenerate();
             return redirect('index');
             
+            
         }else{
             return redirect('/')->with('msg','Login e/ou senha incorretos');
         }
         
-    }}
+    }
 
     public function index(){
 
@@ -40,6 +42,6 @@ public function logout()
         
         Auth::logout();
 
-        return view('login');
+        return redirect('/');
     }
 }

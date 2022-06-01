@@ -1,11 +1,11 @@
 @extends('layouts.main')
 @section('title', 'Home')
 @section('content')
-<h1 class="h3 mb-3 text-center fs-2"><strong>Dashboard</strong></h1>
-<h6>{{$qtt}}</h6>
+<h1 class="h3 mb-5 text-center fs-2"><strong>Dashboard</strong></h1>
 
-<div class="row">
-	<div class="col-xl-6 col-xxl-6 d-flex mt-5">
+
+<div class="row mt-5">
+	<div class="col-xl-12 col-xxl-12 col-sm-12 col-12 d-flex mt-5 mt-3">
 		<div class="w-100">
 			<div class="row">
 				<div class="col-sm-6">
@@ -101,69 +101,7 @@
 		</div>
 	</div>
 	
-	<div class="col-6 col-lg-6 col-xxl-6 d-flex">
-		<div class="card flex-fill">
-			<div class="card-header">
 
-				<h5 class="card-title mb-0">Últimos Serviços</h5>
-			</div>
-			<table class="table table-hover my-0">
-				<thead>
-					<tr>
-						<th>Descrição</th>
-						<th class="d-none d-xl-table-cell">Data</th>
-						<th class="d-none d-md-table-cell">Cliente</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Banho</td>
-						<td class="d-none d-xl-table-cell">01/01/2021</td>
-						<td class="d-none d-md-table-cell">Vanessa Tucker</td>
-					</tr>
-					<tr>
-						<td>Tosa</td>
-						<td class="d-none d-xl-table-cell">01/01/2021</td>
-					
-						<td class="d-none d-md-table-cell">William Harris</td>
-					</tr>
-					<tr>
-						<td>Banho</td>
-						<td class="d-none d-xl-table-cell">01/01/2021</td>
-						<td class="d-none d-md-table-cell">Sharon Lessman</td>
-					</tr>
-					<tr>
-						<td>Banho</td>
-						<td class="d-none d-xl-table-cell">01/01/2021</td>
-						<td class="d-none d-md-table-cell">Vanessa Tucker</td>
-					</tr>
-					<tr>
-						<td>Banho e Tosa</td>
-						<td class="d-none d-xl-table-cell">01/01/2021</td>
-						<td class="d-none d-md-table-cell">William Harris</td>
-					</tr>
-					<tr>
-						<td>Banho</td>
-						<td class="d-none d-xl-table-cell">01/01/2021</td>
-						<td class="d-none d-md-table-cell">Sharon Lessman</td>
-					</tr>
-					<tr>
-						<td>Banho e Tosa</td>
-						<td class="d-none d-xl-table-cell">01/01/2021</td>
-						
-						<td class="d-none d-md-table-cell">Christina Mason</td>
-					</tr>
-					<tr>
-						<td>Banho</td>
-						<td class="d-none d-xl-table-cell">01/01/2021</td>
-						
-						<td class="d-none d-md-table-cell">William Harris</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-	
 	
 
 	

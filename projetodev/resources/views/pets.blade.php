@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-11 col-lg-10 col-xl-10 col-xxl-10 mx-auto">
-        <div class="card shadow-none">
+        <div class="card shadow-lg-none">
             <div class="card-header">
                 <h5 class="card-title mb-0"></h5>
             </div>
@@ -36,7 +36,7 @@
                   <tr>
                     <th scope="row">{{$pet->id}}</th>
                     <td>{{$pet->nome_pet}}</td>
-                    <td>{{$pet->id_cliente}}</td>
+                    <td>{{$pet->client->nome_completo}}</td>
                     <td><a class="btn btn-secondary" href="/singlepett/{{$pet->id}}">Ver</a></td>
                     
                     

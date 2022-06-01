@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-11 col-lg-10 col-xl-10 col-xxl-10 mx-auto">
-        <div class="card shadow-none">
+        <div class="card shadow-lg-none">
             <div class="card-header">
                 <h5 class="card-title mb-0"></h5>
             </div>
@@ -15,8 +15,8 @@
             
         
                 
-            <div class="shadow-lg">
-                <div class="card shadow-lg">
+            <div class="shadow-lg-lg">
+                <div class="card shadow-lg-lg">
                     <div class="card-header">
                         <h5 class="card-title mb-0">Dados</h5>
                     </div>
@@ -24,7 +24,7 @@
                         <p class="card-text">ID Cliente: <strong>{{$cliente->id}}</strong></p>
                         <p class="card-text">CPF: <strong>{{$cliente->cpf}}</strong></p>
                         <p class="card-text">Cadastrado: <strong>{{$cliente->created_at}}</strong> </p>
-                        <a href="" class="btn btn-secondary">Editar Dados</a>
+                        
                     </div>
                 </div>
             </div>
@@ -36,8 +36,8 @@
           
 
             @forelse($enderecos as $endereco)
-            <div class="shadow-lg">
-                <div class="card shadow-lg">
+            <div class="shadow-lg-lg">
+                <div class="card shadow-lg-lg">
                     <div class="card-header">
                         <h5 class="card-title mb-0">{{$endereco->rua}}, {{$endereco->numero}}</h5>
                     </div>
@@ -60,8 +60,8 @@
                 </div>
             </div>
             @empty
-            <div class="shadow-lg">
-                <div class="card shadow-lg">
+            <div class="shadow-lg-lg">
+                <div class="card shadow-lg-lg">
                     <div class="card-header">
                         <h5 class="card-title mb-0"></h5>
                     </div>
@@ -83,8 +83,8 @@
             <h2 class="mb-4 mt-5" style="text-align: center;"><strong>Telefones</strong></h2>
 
             @forelse($telefones as $telefone)
-            <div class="shadow-lg">
-                <div class="card shadow-lg">
+            <div class="shadow-lg-lg">
+                <div class="card shadow-lg-lg">
                     <div class="card-header">
                         <h5 class="card-title mb-0"></h5>
                     </div>
@@ -106,8 +106,8 @@
             </div>
 
             @empty
-            <div class="shadow-lg">
-                <div class="card shadow-lg">
+            <div class="shadow-lg-lg">
+                <div class="card shadow-lg-lg">
                     <div class="card-header">
                         <h5 class="card-title mb-0"></h5>
                     </div>

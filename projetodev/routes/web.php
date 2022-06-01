@@ -27,7 +27,7 @@ use Illumiante\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
-    return view('login');
+    if(auth()->check()){return view('index');}else{return view('login');}
 });
 
 Route::post('/logar', [UserController::class, 'logar']);

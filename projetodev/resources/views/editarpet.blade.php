@@ -15,11 +15,7 @@
             </div>
             <div class="card-body p-xs-0 p-sm-3 p-lg-5 p-md-5">
 
-                {% if msg %}
-                <div class="alert alert-danger text-center mx-auto" role="alert">{{msg}}</div>
-                {% elif msg2 %}
-                <div class="alert alert-success text-center mx-auto" role="alert">{{msg2}}</div>
-                {% endif %}
+              
 
                 <form  id="form_cadastro" method="POST" action="/salvarpeteditado/"> 
             

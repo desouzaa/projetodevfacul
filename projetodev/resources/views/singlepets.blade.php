@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-11 col-lg-10 col-xl-10 col-xxl-10 mx-auto">
-        <div class="card shadow-none">
+        <div class="card shadow-lg border ">
             <div class="card-header">
                 <h5 class="card-title mb-0"></h5>
             </div>
@@ -19,22 +19,22 @@
 
 
             
-            <h1 class="mb-4" style="text-align: center;"><strong></strong></h1>
+            <h1 class="mb-4" style="text-align: center;"><strong>{{$pets->nome_pet}}</strong></h1>
             
         
                 
             <div>
-                <div class="card shadow-none">
+                <div class="card shadow-lg-none">
                     <div class="card-header">
                         <h5 class="card-title mb-0">Dados</h5>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">ID Pet: <strong>{{$pets[0]->id}}</strong></p>
-                        <p class="card-text">Tutor: <strong>{{$pets[0]}}</strong></p>
-                        <p class="card-text">Raça: <strong>{{$pets[0]->id_raca}}</strong></p>
-                        <p class="card-text">Tamanho: <strong>{{$pets[0]->id_tamanho}}</strong></p>
-                        <p class="card-text">Pelagem: <strong>{{$pets[0]->id_pelagem}}</strong></p>
-                        <a href="" class="btn btn-secondary">Editar Dados</a>
+                        <p class="card-text">ID Pet: <strong>{{$pets->id}}</strong></p>
+                        <p class="card-text">Tutor: <strong>{{$pets->client->nome_completo}}</strong></p>
+                        <p class="card-text">Raça: <strong>{{$pets->raca->descricao}}</strong></p>
+                        <p class="card-text">Tamanho: <strong>{{$pets->tamanho->descricao}}</strong></p>
+                        <p class="card-text">Pelagem: <strong>{{$pets->pelagen->descricao}}</strong></p>
+                       
                     </div>
                 </div>
             </div>
@@ -42,11 +42,11 @@
 
             <div class="d-flex flex-row-reverse text-center"> 
                 
-            <form action="/excluirpet/{{$pets[0]->id}}" method="POST">
+            <form action="/excluirpet/{{$pets->id}}" method="POST">
             @csrf
             @method('DELETE')
                 
-           <button class="btn btn-danger" type="submit" onclick="return confirm('Tem certeza que deseja deletar esta tamanho?')">Excluir</button>
+           <button class="btn btn-danger" type="submit" onclick="return confirm('Tem certeza que deseja deletar esta Pet?')">Excluir</button>
             </form>
                 </div>
          

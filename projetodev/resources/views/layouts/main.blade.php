@@ -38,118 +38,116 @@
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar js-sidebar ">
 
-			<div class="sidebar-content js-simplebar bg-white text-dark">
+			<div class="sidebar-content js-simplebar bg-dark text-white">
 				<a class="sidebar-brand text-dark" href="">
-					<span class="align-middle text-center mx-auto">PETTY</span>
+					<span class="align-middle text-center text-white mx-auto">Hounds banho e tosa</span>
 				</a>
 				<!-- CONTEUDO SIDEBAR -->
-				<ul class="sidebar-nav bg-white text-dark">
-					<li class="sidebar-header text-muted">
-						Páginas
-					</li>
+				<ul class="sidebar-nav bg-dark text-dark mt-0">
+					
 
-					<li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="/index">
-							<i class="align-middle bg-white text-muted" data-feather="sliders"></i> <span
-								class="align-middle bg-white text-muted">Dashboard</span>
+					<li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="/index">
+							<i class="align-middle bg-dark text-muted" data-feather="sliders"></i> <span
+								class="align-middle bg-dark text-muted">Dashboard</span>
 						</a>
 					</li>
 
 				
 					</li>
 
-					<li class="sidebar-header bg-white text-muted">
+					<li class="sidebar-header bg-dark text-muted">
 						Pedidos e agendamentos
 					</li>
 
-					<li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="/pedidosfinalizados">
-							<i class="align-middle bg-white text-muted" data-feather="check-square"></i> <span
-								class="align-middle bg-white text-muted">Pedidos Finalizados</span>
+					<li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="/pedidosfinalizados">
+							<i class="align-middle bg-dark text-muted" data-feather="check-square"></i> <span
+								class="align-middle bg-dark text-muted">Pedidos Finalizados</span>
 						</a>
 					</li>
 
-					<li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="/cadastrarpedido">
-							<i class="align-middle bg-white text-muted" data-feather="file-plus"></i> <span
-								class="align-middle bg-white text-muted">Novo Pedido</span>
+					<li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="/cadastrarpedido">
+							<i class="align-middle bg-dark text-muted" data-feather="file-plus"></i> <span
+								class="align-middle bg-dark text-muted">Novo Pedido</span>
 						</a>
 					</li>
 
 					
-					<!-- <li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="">
-							<i class="align-middle bg-white text-muted" data-feather="trending-up"></i> <span
-								class="align-middle bg-white text-muted">Relatórios</span>
+					<!-- <li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="">
+							<i class="align-middle bg-dark text-muted" data-feather="trending-up"></i> <span
+								class="align-middle bg-dark text-muted">Relatórios</span>
 						</a>
 					</li> -->
 
-					<li class="sidebar-header bg-white text-muted">
+					<li class="sidebar-header bg-dark text-muted">
 						Pagamentos
 					</li>
 
-					<li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="/pagamentos">
-							<i class="align-middle bg-white text-muted" data-feather="dollar-sign"></i> <span
-								class="align-middle bg-white text-muted">Pagamentos</span>
+					<li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="/pagamentos">
+							<i class="align-middle bg-dark text-muted" data-feather="dollar-sign"></i> <span
+								class="align-middle bg-dark text-muted">Pagamentos</span>
 						</a>
 					</li>
 
-					<li class="sidebar-header bg-white text-muted">
+					<li class="sidebar-header bg-dark text-muted">
 						Serviços
 					</li>
 
-					<li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="/servicos">
-							<i class="align-middle bg-white text-muted" data-feather="package"></i> <span
-								class="align-middle bg-white text-muted">Serviços</span>
+					<li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="/servicos">
+							<i class="align-middle bg-dark text-muted" data-feather="package"></i> <span
+								class="align-middle bg-dark text-muted">Serviços</span>
 						</a>
 					</li>
 
-					<li class="sidebar-header bg-white text-muted">
+					<li class="sidebar-header bg-dark text-muted">
 						Clientes
 					</li>
 
-					<li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="/clientes">
-							<i class="align-middle bg-white text-muted" data-feather="users"></i> <span
-								class="align-middle bg-white text-muted">Clientes</span>
+					<li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="/clientes">
+							<i class="align-middle bg-dark text-muted" data-feather="users"></i> <span
+								class="align-middle bg-dark text-muted">Clientes</span>
 						</a>
 					</li>
 
 					
 
-					<li class="sidebar-header bg-white text-muted">
+					<li class="sidebar-header bg-dark text-muted">
 						Pets
 					</li>
 
 					
 
-					<li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="/pets">
-							<i class="align-middle bg-white text-muted" data-feather="gitlab"></i> <span
-								class="align-middle bg-white text-muted">Pets</span>
+					<li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="/pets">
+							<i class="align-middle bg-dark text-muted" data-feather="gitlab"></i> <span
+								class="align-middle bg-dark text-muted">Pets</span>
 						</a>
 					</li>
 
-					<li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="/racas">
-							<i class="align-middle bg-white text-muted" data-feather="plus-circle"></i> <span
-								class="align-middle bg-white text-muted">Raças</span>
+					<li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="/racas">
+							<i class="align-middle bg-dark text-muted" data-feather="plus-circle"></i> <span
+								class="align-middle bg-dark text-muted">Raças</span>
 						</a>
 					</li>
 
-					<li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="/tamanhos">
-							<i class="align-middle bg-white text-muted" data-feather="maximize-2"></i> <span
-								class="align-middle bg-white text-muted">Tamanhos</span>
+					<li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="/tamanhos">
+							<i class="align-middle bg-dark text-muted" data-feather="maximize-2"></i> <span
+								class="align-middle bg-dark text-muted">Tamanhos</span>
 						</a>
 					</li>
 
-					<li class="sidebar-item bg-white text-muted">
-						<a class="sidebar-link bg-white text-muted" href="/pelagens">
-							<i class="align-middle bg-white text-muted" data-feather="plus-square"></i> <span
-								class="align-middle bg-white text-muted">Pelagens</span>
+					<li class="sidebar-item bg-dark text-muted">
+						<a class="sidebar-link bg-dark text-muted" href="/pelagens">
+							<i class="align-middle bg-dark text-muted" data-feather="plus-square"></i> <span
+								class="align-middle bg-dark text-muted">Pelagens</span>
 						</a>
 					</li>
 
@@ -157,14 +155,14 @@
 				<!-- FIM CONTEUDO SIDEBAR -->
 
 				
-				 <div class="sidebar-cta bg-white">
-					<div class="sidebar-cta-content bg-secondary">
-						<strong class="d-inline-block mb-2">Montségur Tech</strong>
-						<div class="mb-3 text-sm">
+				 <div class="sidebar-cta bg-dark">
+					<div class="sidebar-cta-content bg-light">
+						<strong class="d-inline-block mb-2 text-muted">Gangland Tech</strong>
+						<div class="mb-3 text-sm text-muted">
 							Área administrativa 
 						</div>
 						<div class="d-grid">
-							<a href="" class="btn btn-light">Acessar minha conta</a>
+							<a href="" class="btn btn-dark text-light">Acessar minha conta</a>
 						</div>
 					</div>
 				</div>
@@ -231,7 +229,7 @@
 						<div class="col-6 text-start">
 							<p class="mb-0">
 								<a class="text-muted" href="https://www.linkedin.com/in/rafael-de-souza-7a96a41a6"
-									target="_blank"><strong>Montségur Tech</strong></a> &copy;
+									target="_blank"><strong>Gangland Tech</strong></a> &copy;
 							</p>
 						</div>
 						<div class="col-6 text-end">

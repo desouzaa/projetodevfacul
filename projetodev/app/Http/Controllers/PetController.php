@@ -18,7 +18,7 @@ class PetController extends Controller
         if(auth()->check()){
 
     $pets = Pet::all();
-
+   
     return view('pets', ['pets' => $pets]);
 
     }else{
@@ -72,7 +72,7 @@ class PetController extends Controller
             
             public function singlepett($id){
             if(auth()->check()){
-            $pets = Pet::where('id',$id)->get();
+            $pets = Pet::find($id);
             return view('singlepets', ['pets'=>$pets]);
 
             }else{
